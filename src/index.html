@@ -5,10 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page title</title>
     <link rel="stylesheet" href="./sass/index.scss" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Seymour+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+
+    // подключите slick-theme.css для использования стандартной темы отображения
+    навигации
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
     <script type="module" src="./index.js"></script>
   </head>
+
   <body>
-    <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <include src="./partials/example.html"></include>
+    <!-- Олександр Павленко -->
+    <header>
+      <include src="./partials/hero-header.html"></include>
+    </header>
+    <!-- Костянтин Лещенко -->
+    <include src="./partials/products.html"></include>
+    <!-- Олексій Кривенцов -->
+    <include src="./partials/about.html"></include>
+    <!-- Богдан Потопник -->
+    <include src="./partials/advantages.html"></include>
+    <!-- Інна Нурбаєва -->
+    <include src="./partials/gallery.html"></include>
+    <!-- Ігор Боровик -->
+    <include src="./partials/customer-reviews.html"></include>
+    <!-- Світлана Шайген -->
+    <include src="./partials/contacts.html"></include>
+    <!-- Дмитро Лисиця -->
+    <footer>
+      <include src="./partials/footer.html"></include>
+    </footer>
   </body>
 </html>
