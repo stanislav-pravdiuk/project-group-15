@@ -1,0 +1,33 @@
+.about {
+    background-color: var(--color-primary-green);
+    display: block;
+    padding-top: 61px;
+    padding-bottom: 64px;
+}
+
+.about__label {
+    @include font(800, 30px, calc(37 / 30), 0.04em);
+    color: var(--color-primary-light);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.about__title {
+    font-family: var(--font-header);
+    @include font(400, 36px, calc(45 / 36), 0.06em);
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--color-primary-light);
+}
+
+.about__item {
+    list-style: none;
+}
+
+.about__text {
+    @include font(400, 12px, calc(21 / 12), 0.04em);
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--color-primary-light);
+}
+
