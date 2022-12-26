@@ -6,20 +6,20 @@
   background-size: cover;
   background-image: url(../images/backraund/background-mobile.jpg);
 
-  @media retina {
+  @include retina {
     background-image: url(../images/backraund/background-mobile@2x.jpg);
   }
 
   @include tablett {
     background-image: url(../images/backraund/background-tablet.jpg);
-    @media retina {
+    @include retina {
       background-image: url(../images/backraund/background-tablet@2x.jpg);
     }
   }
 
   @include desktop {
     background-image: url(../images/backraund/background-desctop.jpg);
-    @media retina {
+    @include retina {
       background-image: url(../images/backraund/background-desctop@2x.jpg);
     }
   }
@@ -62,25 +62,28 @@
   display: flex;
   justify-content: center;
   padding-top: 40px;
-  outline: dashed 1px cyan;
+  padding-bottom: 60px;
+  // outline: dashed 1px cyan;
+  @include tablett {
+    padding-top: 80px;
+  }
+
+  @include desktop {
+    padding-top: 120px;
+  }
 }
 
 .products__list {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  //  margin: 0 auto;
-  // padding-top: 51px;
-  padding-bottom: 60px;
   gap: 60px;
 
   @include tablett {
-    // padding-top: 120px;
     gap: 16px;
   }
 
   @include desktop {
-    // padding-top: 183px;
     gap: 29px;
   }
 }
@@ -90,10 +93,38 @@
   margin: 0 auto;
   height: 528px;
   padding-top: 11px;
+  outline: dashed 1px tomato;
+
+  @include tablett {
+    padding-top: 12px;
+    height: 548px;
+  }
 
   @include desktop {
     padding-top: 16px;
     height: 719px;
+  }
+}
+
+.products__link {
+  text-decoration: none;
+
+  &::after {
+    content: '';
+    width: 40px;
+    height: 16px;
+    background-image: url(../images/products/arrow.svg);
+    bottom: 16px;
+    left: calc(50% - 20px);
+    position: absolute;
+
+    @include tablett {
+      bottom: 12px;
+    }
+
+    @include desktop {
+      bottom: 60px;
+    }
   }
 }
 
@@ -128,12 +159,23 @@
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background-image: url('../images/products/kelsey-curtis-G5ZenftPPOA-unsplash2.jpg');
+    background-position: center;
+    background-size: cover;
+    background-image: url(../images/products/kelsey-curtis-G5ZenftPPOA-unsplash2.jpg);
+    @include retina {
+      background-image: url(../images/products/kelsey-curtis-G5ZenftPPOA-unsplash2@2x.jpg);
+    }
+    @include tablett {
+      top: -12px;
+    }
     @include desktop {
       top: -16px;
       width: 302px;
       height: 302px;
-      background-image: url('../images/products/kelsey-curtis-G5ZenftPPOA-unsplash2-desktop.jpg');
+      background-image: url(../images/products/kelsey-curtis-G5ZenftPPOA-unsplash2-desktop.jpg);
+      @include retina {
+        background-image: url(../images/products/kelsey-curtis-G5ZenftPPOA-unsplash2-desktop@2x.jpg);
+      }
     }
   }
 }
@@ -169,12 +211,23 @@
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background-image: url('../images/products/kelsey-curtis-G5ZenftPPOA-unsplash2.jpg');
+    background-position: center;
+    background-size: cover;
+    background-image: url(../images/products/pariwat-pannium-0_qbeF_0zn8-unsplash1.jpg);
+    @include retina {
+      background-image: url(../images/products/pariwat-pannium-0_qbeF_0zn8-unsplash1@2x.jpg);
+    }
+    @include tablett {
+      top: -12px;
+    }
     @include desktop {
       top: -16px;
       width: 302px;
       height: 302px;
-      background-image: url('../images/products/kelsey-curtis-G5ZenftPPOA-unsplash2-desktop.jpg');
+      background-image: url(../images/products/pariwat-pannium-0_qbeF_0zn8-unsplash1-desktop.jpg);
+      @include retina {
+        background-image: url(../images/products/pariwat-pannium-0_qbeF_0zn8-unsplash1-desktop@2x.jpg);
+      }
     }
   }
 }
@@ -210,12 +263,23 @@
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background-image: url('../images/products/kelsey-curtis-G5ZenftPPOA-unsplash2.jpg');
+    background-position: center;
+    background-size: cover;
+    background-image: url(../images/products/victor-rutka-4FujjkcI40g-unsplash1.jpg);
+    @include retina {
+      background-image: url(../images/products/victor-rutka-4FujjkcI40g-unsplash1@2x.jpg);
+    }
+    @include tablett {
+      top: -12px;
+    }
     @include desktop {
       top: -16px;
       width: 302px;
       height: 302px;
-      background-image: url('../images/products/kelsey-curtis-G5ZenftPPOA-unsplash2-desktop.jpg');
+      background-image: url(../images/products/victor-rutka-4FujjkcI40g-unsplash1-desktop.jpg);
+      @include retina {
+        background-image: url(../images/products/victor-rutka-4FujjkcI40g-unsplash1-desktop@2x.jpg);
+      }
     }
   }
 }
@@ -231,6 +295,7 @@
     width: 224px;
     height: 428px;
     padding: 108px 26px 12px 26px;
+    transform: translateY(108px);
   }
 
   @include desktop {
@@ -258,6 +323,7 @@
   text-align: center;
   text-transform: uppercase;
   padding-bottom: 40px;
+  color: var(--color-primary-dark);
 
   @include tablett {
     @include font(700, 22px, calc(27 / 22), 0.04em);
