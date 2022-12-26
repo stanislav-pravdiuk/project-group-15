@@ -1,0 +1,121 @@
+<header class="header container">
+    <picture>
+        <source srcset="./images/hero-header/logo-desk.png 1x, ./images/hero-header/logo-desk2x.png 2x"
+            media="(min-width: 1200px)">
+        <source srcset="./images/hero-header/logo-tab.png 1x, ./images/hero-header/logo-tab2x.png 2x"
+            media="(min-width: 768px)">
+        <source srcset="./images/hero-header/logo-mob.png 1x, ./images/hero-header/logo-mob2x.png"
+            media="(max-width: 767px)">
+        <img src="./images/hero-header/logo-mob.png" alt="logo">
+    </picture>
+    <button type="button" class="menu-open" data-menu-open>
+        <svg width="32" height="32">
+            <use href="./images/hero-header/icons-hero-header.svg#icon-menu"></use>
+        </svg>
+    </button>
+    <ul class="header__list">
+        <li>
+            <a href="" class="heder__link">Home</a>
+        </li>
+        <li>
+            <a href="" class="heder__link">How it’s made?</a>
+        </li>
+        <li>
+            <a href="" class="heder__link">Our products</a>
+        </li>
+        <li>
+            <a href="" class="heder__link">Contact</a>
+        </li>
+    </ul>
+    <button type="button" class="header__btn">
+        Buy now
+        <svg width="12" height="12" class="btn-item">
+            <use href="./images/hero-header/icons-hero-header.svg#icon-sign"></use>
+        </svg>
+    </button>
+    <div class="mobile-menu is-hidden" data-menu>
+        <picture>
+            <source srcset="./images/hero-header/logo-tab.png 1x, ./images/hero-header/logo-tab2x.png 2x"
+                media="(min-width: 768px)">
+            <source srcset="./images/hero-header/logo-mob.png 1x, ./images/hero-header/logo-mob2x.png"
+                media="(max-width: 767px)">
+            <img src="./images/hero-header/logo-mob.png" alt="logo">
+        </picture>
+        <button type="button" class="menu-close" data-menu-close>
+            <svg width="32" height="32">
+                <use href="./images/hero-header/icons-hero-header.svg#icon-cross"></use>
+            </svg>
+        </button>
+        <ul class="mobile-menu__list">
+            <li>
+                <a href="" class="mobile-menu__link">Home</a>
+            </li>
+            <li>
+                <a href="" class="mobile-menu__link">How it’s made?</a>
+            </li>
+            <li>
+                <a href="" class="mobile-menu__link">Our products</a>
+            </li>
+            <li>
+                <a href="" class="mobile-menu__link">Contact</a>
+            </li>
+        </ul>
+        <button type="button" class="mobile-btn">
+            Buy now
+            <svg width="12" height="12" class="btn-item">
+                <use href="./images/hero-header/icons-hero-header.svg#icon-sign"></use>
+            </svg>
+        </button>
+</header>
+<section class="hero container">
+    <div class="hero__wraper">
+        <div class="hero__thumb">
+            <h1 class="hero__title">ice cream made with passion</h1>
+            <button type="button" class="hero__btn">
+                <a href="" class="hero__link">
+                    Products
+                </a>
+            </button>
+            <a href="" class="hero__link hero__link--accent">
+                How it’s made?
+            </a>
+        </div>
+        <ul class="hero__list">
+            <li>
+                <ul class="hero-number__list">
+                    <li class="hero__number">16</li>
+                    <li class="hero__dsc">cafes</li>
+                </ul>
+            </li>
+            <li>
+                <ul class="hero-number__list">
+                    <li class="hero__number">23</li>
+                    <li class="hero__text">food trucks</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <picture class="plate">
+        <source srcset="./images/hero-header/plate-desktop.png 1x, ./images/hero-header/plate-desktop2x.png 2x"
+            media="(min-width: 1200px)">
+        <source srcset="./images/hero-header/plate-tab.png 1x, ./images/hero-header/plate-tab2x.png 2x"
+            media="(min-width: 768px)">
+        <img src="./images/hero-header/plate-tab.png" alt="plate with ice-cream">
+    </picture>
+    <p class="hero__text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et
+    </p>
+    <svg width="40" height="16" class="arrow">
+        <use href="./images/hero-header/icons-hero-header.svg#icon-arrow"></use>
+    </svg>
+    <picture class="ice-cream">
+        <source srcset="./images/hero-header/desktop.png 1x, ./images/hero-header/desktop2x.png 2x"
+            media="(min-width: 1200px)">
+        <source srcset="./images/hero-header/tablet.png 1x, ./images/hero-header/tablet2x.png 2x"
+            media="(min-width: 768px)">
+        <source srcset="./images/hero-header/mobile.png 1x, ./images/hero-header/mobile2x.png 2x"
+            media="(max-width: 767px)">
+        <img src="./images/hero-header/mobile.png" alt="морозиво">
+    </picture>
+</section>
