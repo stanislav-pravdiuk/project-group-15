@@ -25,6 +25,12 @@
   width: 280px;
   padding: 28px;
 
+  @include tablett {
+    width: 568px;
+    height: auto;
+    padding: 28px;
+  }
+
   // opacity: 0;
 
   .list {
@@ -38,78 +44,234 @@
   }
 }
 
-// .modal-buy-now__list {
-//   position: relative;
-// }
-
-// .modal-buy-now__item {
-//   position: relative;
-// }
-
-// .modal-buy-now__img {
-//   position: relative;
-//   z-index: 1;
-// }
-
-.modal-buy-now__circle-green {
-  // position: absolute;
-  top: 1px;
-  width: 132px;
-  height: 132px;
-  background-color: rgba(156, 190, 143, 0.7);
-  border-radius: 50%;
+.modal-buy-now__bloque {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  outline: dashed 1px cyan;
 }
 
-.modal-buy-now__square-green {
+.modal-buy-now__list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  //  margin: 0 auto;
+  // padding-top: 51px;
+  padding-bottom: 20px;
+  gap: 20px;
+
+  @include tablett {
+    // padding-top: 120px;
+    gap: 32px;
+  }
+
+  // @include desktop {
+  //   // padding-top: 183px;
+  //   gap: 29px;
+  // }
+}
+
+.modal-buy-now__card {
+  position: relative;
+  margin: 0 auto;
+  height: 198px;
+  padding-top: 11px;
+
+  @include desktop {
+    padding-top: 16px;
+    height: 719px;
+  }
+}
+
+.modal-buy-now__image--icecream-color {
   width: 132px;
   height: 132px;
+  // background-color: rgba(248, 210, 78, 0.7);
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @include desktop {
+    width: 132px;
+    height: 132px;
+  }
+
+  background: linear-gradient(
+      0deg,
+      rgba(156, 190, 143, 0.7),
+      rgba(156, 190, 143, 0.7)
+    ),
+    #d9d9d9;
+  box-shadow: 0px 5.34219px 20.0332px rgba(10, 136, 23, 0.25);
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: -7px;
+    transform: translateX(-50%);
+    width: 132px;
+    height: 132px;
+    border-radius: 50%;
+    background-image: url('../images/buy-now/kelsey.jpg');
+    @include desktop {
+      top: -7px;
+      width: 132px;
+      height: 132px;
+      background-image: url('../images/buy-now/kelsey@2x.jpg');
+    }
+  }
+}
+
+.modal-buy-now__image--icecoffee-color {
+  width: 132px;
+  height: 132px;
+  // background-color: var(--color-ice-coffee);
+  // border: 1px solid rgba(212, 20, 67, 0.1);
+  border-radius: 15px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @include desktop {
+    width: 132px;
+    height: 132px;
+  }
+
+  background: linear-gradient(
+      0deg,
+      rgba(248, 210, 78, 0.7),
+      rgba(248, 210, 78, 0.7)
+    ),
+    #d9d9d9;
+  box-shadow: 0px 5.40397px 20.2649px rgba(153, 114, 23, 0.25);
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: -7px;
+    transform: translateX(-50%);
+    width: 132px;
+    height: 132px;
+    border-radius: 50%;
+    background-image: url('../images/buy-now/pariwat.jpg');
+    @include desktop {
+      top: -7px;
+      width: 132px;
+      height: 132px;
+      background-image: url('../images/buy-now/pariwat@2x.jpg');
+    }
+  }
+}
+
+.modal-buy-now__image--milkshake-color {
+  width: 132px;
+  height: 132px;
+  // background-color: rgba(213, 117, 63, 0.7);
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @include desktop {
+    width: 132px;
+    height: 132px;
+  }
+
+  background: linear-gradient(
+      0deg,
+      rgba(213, 117, 63, 0.7),
+      rgba(213, 117, 63, 0.7)
+    ),
+    #d9d9d9;
+  box-shadow: 0px 5.41333px 20.3px rgba(0, 0, 0, 0.25);
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: -7px;
+    transform: translateX(-50%);
+    width: 132px;
+    height: 132px;
+    border-radius: 50%;
+    background-image: url('../images/buy-now/victor.jpg');
+    @include desktop {
+      // top: -7px;
+      // width: 132px;
+      // height: 132px;
+      background-image: url('../images/buy-now/victor@2x.jpg');
+    }
+  }
+}
+
+.modal-buy-now__card-form {
+  width: 132px;
+  height: 132px;
+  border-radius: 15px;
+  // border-radius: 24px;
+  padding: 96px 16px 20px 16px;
+  transform: translateY(60px);
+
+  @include tablett {
+    width: 132px;
+    height: 132px;
+    padding: 96px 16px 20px 16px;
+  }
+
+  @include desktop {
+    width: 132px;
+    height: 132px;
+    padding: 96px 16px 20px 16px;
+  }
+}
+
+.icecream-border-color {
   background-color: var(--color-primary-light);
-  border: 1px solid #96AF8C;
-  border-radius: 15px;
+  border: 1px solid
+  #96AF8C;
 }
 
-.modal-buy-now__circle-yellow {
-  width: 132px;
-  height: 132px;
-  background-color: rgba(248, 210, 78, 0.7);
-  border-radius: 50%;
-}
-
-.modal-buy-now__square-yellow {
-  width: 132px;
-  height: 132px;
+.icecoffee-border-color {
   background-color: var(--color-ice-coffee);
-  border: 1px solid rgba(212, 20, 67, 0.1);
-  border-radius: 15px;
+  border: 1px solid var(--color-ice-coffee);
 }
 
-.modal-buy-now__circle-brown {
-  width: 132px;
-  height: 132px;
-  background-color: rgba(213, 117, 63, 0.7);
-  border-radius: 50%;
-}
-
-.modal-buy-now__square-brown {
-  width: 132px;
-  height: 132px;
+.milkshake-border-color {
   background-color: var(--color-primary-light);
   border: 1px solid var(--color-milkshake);
-  border-radius: 15px;
 }
 
-.modal-buy-now__link {
-  display: block;
-  text-align: center;
-  margin-top: 96px;
-
+.modal-buy-now__list-header {
+  @include font(700, 16px, calc(20 / 16), 0.04em);
   color: var(--color-primary-dark);
-  font-weight: 700;
-  font-size: 16px;
-  line-height: calc(20 / 16);
-  letter-spacing: 0.04em;
+  text-align: center;
   text-transform: uppercase;
+  // padding-bottom: 20px;
+  width: 106px;
+  height: 20px;
 }
+
+
+
+
+// .modal-buy-now__link {
+//   display: block;
+//   text-align: center;
+
+//   color: var(--color-primary-dark);
+//   font-weight: 700;
+//   font-size: 16px;
+//   line-height: calc(20 / 16);
+//   letter-spacing: 0.04em;
+//   text-transform: uppercase;
+// }
 
 .contact-form__title {
   display: block;
