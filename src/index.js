@@ -1,3 +1,4 @@
-import "./js/slider.js";
+import "./js/slider";
 import "./js/mobile-menu";
-import "./js/read-more.js";
+import "./js/read-more";
+import "./js/about-product";
