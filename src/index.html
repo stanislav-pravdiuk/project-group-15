@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page title</title>
-    <link rel="stylesheet" href="./sass/index.scss" />
+    <link rel="stylesheet" href="./sass/main.scss" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,9 +16,6 @@
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
     />
-
-    // подключите slick-theme.css для использования стандартной темы отображения
-    навигации
     <link
       rel="stylesheet"
       type="text/css"
@@ -30,23 +27,35 @@
   <body>
     <!-- Олександр Павленко -->
     <header>
-      <include src="./partials/hero-header.html"></include>
+      <include src="./partials/sections/header.html"></include>
     </header>
-    <!-- Костянтин Лещенко -->
-    <include src="./partials/products.html"></include>
-    <!-- Олексій Кривенцов -->
-    <include src="./partials/about.html"></include>
-    <!-- Богдан Потопник -->
-    <include src="./partials/advantages.html"></include>
-    <!-- Інна Нурбаєва -->
-    <include src="./partials/gallery.html"></include>
-    <!-- Ігор Боровик -->
-    <include src="./partials/customer-reviews.html"></include>
-    <!-- Світлана Шайген -->
-    <include src="./partials/contacts.html"></include>
-    <!-- Дмитро Лисиця -->
+
+    <main>
+      <include src="./partials/sections/hero.html"></include>
+      <!-- modals -->
+      <!-- Олександр Кохно -->
+      <include src="./partials/modals/buy-now.html"></include>
+      <!-- Костянтин Лещенко -->
+      <include src="./partials/modals/about-product.html"></include>
+      <!-- Костянтин Лещенко -->
+      <include src="./partials/sections/products.html"></include>
+      <!-- Олексій Кривенцов -->
+      <include src="./partials/sections/about.html"></include>
+      <!-- modal -->
+      <!-- Ігор Боровик -->
+      <include src="./partials/modals/read-more.html"></include>
+      <!-- Богдан Потопник -->
+      <include src="./partials/sections/advantages.html"></include>
+      <!-- Інна Нурбаєва -->
+      <include src="./partials/sections/gallery.html"></include>
+      <!-- Ігор Боровик -->
+      <include src="./partials/sections/customer-reviews.html"></include>
+      <!-- Світлана Шайген -->
+      <include src="./partials/sections/contacts.html"></include>
+      <!-- Дмитро Лисиця -->
+    </main>
     <footer>
-      <include src="./partials/footer.html"></include>
+      <include src="./partials/sections/footer.html"></include>
     </footer>
   </body>
 </html>

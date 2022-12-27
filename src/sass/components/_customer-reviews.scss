@@ -1,0 +1,121 @@
+.section__customer-reviews {
+  padding-bottom: 40px;
+
+  background-image: url(../images/backraund/background-mobile.jpg);
+  background-size: cover;
+
+  @media retina {
+    background-image: url(../images/backraund/background-mobile@2x.jpg);
+  }
+
+  @include tablett {
+    padding-bottom: 80px;
+    background-image: url(../images/backraund/background-tablet.jpg);
+    @media retina {
+      background-image: url(../images/backraund/background-tablet@2x.jpg);
+    }
+  }
+
+  @include desktop {
+    padding-bottom: 100px;
+    background-image: url(../images/backraund/background-desctop.jpg);
+    @media retina {
+      background-image: url(../images/backraund/background-desctop@2x.jpg);
+    }
+  }
+}
+
+.customer-reviews {
+  text-align: center;
+  @include desktop {
+    width: calc(968px + 16px * 2);
+  }
+}
+
+.customer-reviews__title {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.customer-reviews__images {
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 32px;
+}
+
+.customer-reviews__text {
+  width: 100%;
+  padding: 35px 39px;
+  background: #84a178;
+  border-radius: 24px;
+  margin-bottom: 32px;
+
+  @include font(none, 12px, calc(31 / 12), none);
+  color: var(--color-primary-light);
+
+  @include tablett {
+    padding: 28px 80px;
+
+    @include font(500, 14px, calc(26 / 14), 0.04em);
+  }
+
+  @include desktop {
+    padding: 43px 109px;
+
+    @include font(none, 16px, calc(30 / 16), none);
+  }
+}
+
+.customer-reviews__name {
+  margin-bottom: 12px;
+
+  @include font(500, 20px, calc(37 / 20), none);
+  color: var(--color-primary-dark);
+
+  @include tablett {
+    margin-bottom: 32px;
+
+    @include font(none, 16px, calc(30 / 16), none);
+  }
+}
+
+// Налаштування слайдеру
+
+.slick-dots {
+  position: relative !important;
+  bottom: 0px !important;
+}
+
+.slick-dotted.slick-slider {
+  margin-bottom: 0 !important;
+}
+
+.slick-dots li {
+  margin: 0 9px !important;
+  width: 12px !important;
+  height: 12px !important;
+}
+
+.slick-dots li button:before {
+  width: 12px !important;
+  height: 12px !important;
+  background-color: #d9d9d9;
+  color: transparent !important;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 1 !important;
+}
+
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before {
+  background-color: var(--color-primary-green);
+}
+
+.slick-dots li.slick-active button:before {
+  background-color: var(--color-primary-green);
+}
