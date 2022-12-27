@@ -1,43 +1,16 @@
-.link {
-    text-decoration: none;
-}
-
-.list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-p {
-  margin: 0;
-  padding: 0;
-}
-
-.hide {
-    border: 0;
-    clip: rect(1px, 1px, 1px, 1px);
-    -webkit-clip-path: inset(50%);
-    clip-path: inset(50%);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-    word-wrap: normal !important;
-  }
-
-.container {
-    font-family: 'Montserrat', 'Arial', sans-serif;
+.contacts {
     width: 100%;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
+    & {
+      background-image: linear-gradient(to bottom, transparent 25%, var(--color-primary-green) 25%);
+      @include tablett {
+       background-image: linear-gradient(to bottom, transparent 48%, var(--color-primary-green) 48%);
+      }
+      @include desktop {
+       background-image: linear-gradient(to bottom, transparent 20%, var(--color-primary-green) 20%);
+      }
+    }
+  }
+   
 .contacts__container {
     width: 100%;
     @media screen and (min-width:768px) {
@@ -191,7 +164,7 @@ line-height: 1.83;
 
 letter-spacing: 0.04em;
 
-color: var(--color-primary-yellow);
+color: var(--color-milkshake);
 
 @media screen and (min-width:768px) {
     font-size: 14px;
@@ -291,21 +264,44 @@ margin-left: auto;
 margin-right: auto;
 gap: 4px;
 
-
 color: var(--color-primary-dark);
-background-color: transparent;
+background-color: var(--color-primary-yellow);
+
+
 cursor: pointer;
 
-border: 2px solid #F8D24E;
+border: 2px solid transparent;
 border-radius: 10px;
-
-
 
 }
 
-.contacts__btn:hover,
-.contacts__btn:focus {
-    background-color: var(--color-primary-yellow);
+.btn-locations:hover {
+    background-color: var(--color-btn-green);
+}
+
+.btn-locations:focus {
+    background-color: var(--color-btn-green);
+    color: var(--color-btn-white);
+}
+
+.btn-franchise {
+    background-color: transparent;
+    border-color: var(--color-primary-yellow);  
+}
+
+.btn-franchise:hover {
+    border-color: var(--color-btn-green);
+    background-color: transparent;
+}
+
+.btn-franchise:focus {
+    color: var(--color-btn-white);
+    border-color: var(--color-btn-green);
+}
+
+
+.contacts__icon {
+    fill: currentColor;
 }
 
 .contacts-btn__item:not(:last-child) {
@@ -313,10 +309,7 @@ border-radius: 10px;
 }
 
 .btn__list {
-    
-    margin-bottom: 60px;
-
-    @media screen and (min-width:768px) {
+     @media screen and (min-width:768px) {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
