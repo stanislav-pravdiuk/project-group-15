@@ -3,6 +3,7 @@ body {
 
   @include font(400, 14px, null, 0.03em);
 
+  background-color: var(--color-primary-green);  
   color: var(--color-primary-dark);
   margin: 0;
   padding: 0;
