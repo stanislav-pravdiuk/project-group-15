@@ -2,10 +2,18 @@
   <div class="hero__wraper">
     <div class="hero__thumb">
       <h1 class="hero__title">ice cream made with passion</h1>
-      <button type="button" class="hero__btn">
-        <a href="" class="hero__link"> Products </a>
-      </button>
-      <a href="" class="hero__link hero__link--accent"> How it’s made? </a>
+      <ul class="hero-link__list">
+        <li>
+          <a href="" class="hero__link hero__btn">
+            Products
+          </a>
+        </li>
+        <li>
+          <a href="" class="hero__link hero__link--accent">
+            How it’s made??
+          </a>
+        </li>
+      </ul>
     </div>
     <ul class="hero__list">
       <li>
@@ -22,52 +30,29 @@
       </li>
     </ul>
   </div>
-  <picture class="plate">
-    <source
-      srcset="
-        ./images/hero-header/plate-desktop.png   1x,
-        ./images/hero-header/plate-desktop2x.png 2x
-      "
-      media="(min-width: 1200px)"
-    />
-    <source
-      srcset="
-        ./images/hero-header/plate-tab.png   1x,
-        ./images/hero-header/plate-tab2x.png 2x
-      "
-      media="(min-width: 768px)"
-    />
-    <img src="./images/hero-header/plate-tab.png" alt="plate with ice-cream" />
-  </picture>
-  <p class="hero__text">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et
-  </p>
-  <svg width="40" height="16" class="arrow">
-    <use href="./images/hero-header/icons-hero-header.svg#icon-arrow"></use>
-  </svg>
+  <div class="hero-text__wrap">
+    <picture class="plate">
+      <source srcset="./images/hero-header/plate-desktop.png 1x, ./images/hero-header/plate-desktop2x.png 2x"
+        media="(min-width: 1200px)">
+      <source srcset="./images/hero-header/plate-tab.png 1x, ./images/hero-header/plate-tab2x.png 2x"
+        media="(min-width: 768px)">
+      <img src="./images/hero-header/plate-tab.png" alt="plate with ice-cream">
+    </picture>
+    <p class="hero__text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+      labore et
+      <svg width="40" height="16" class="arrow">
+        <use href="./images/hero-header/icons-hero-header.svg#icon-arrow"></use>
+      </svg>
+    </p>
+  </div>
   <picture class="ice-cream">
-    <source
-      srcset="
-        ./images/hero-header/desktop.png   1x,
-        ./images/hero-header/desktop2x.png 2x
-      "
-      media="(min-width: 1200px)"
-    />
-    <source
-      srcset="
-        ./images/hero-header/tablet.png   1x,
-        ./images/hero-header/tablet2x.png 2x
-      "
-      media="(min-width: 768px)"
-    />
-    <source
-      srcset="
-        ./images/hero-header/mobile.png   1x,
-        ./images/hero-header/mobile2x.png 2x
-      "
-      media="(max-width: 767px)"
-    />
-    <img src="./images/hero-header/mobile.png" alt="морозиво" />
+    <source srcset="./images/hero-header/desktop.png 1x, ./images/hero-header/desktop2x.png 2x"
+      media="(min-width: 1200px)">
+    <source srcset="./images/hero-header/tablet.png 1x, ./images/hero-header/tablet2x.png 2x"
+      media="(min-width: 768px)">
+    <source srcset="./images/hero-header/mobile.png 1x, ./images/hero-header/mobile2x.png 2x"
+      media="(max-width: 767px)">
+    <img src="./images/hero-header/mobile.png" alt="ice-cream">
   </picture>
 </section>

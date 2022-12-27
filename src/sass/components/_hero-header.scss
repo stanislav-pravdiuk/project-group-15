@@ -64,7 +64,7 @@
 
     &:hover,
     &:focus {
-        background-color: var(--color-primary-green);
+        background-color: #0A8817;
     }
 
     &:focus {
@@ -73,6 +73,7 @@
 }
 
 .btn-item {
+    fill: currentColor;
     margin-left: 8px;
 }
 
@@ -89,7 +90,7 @@
 .mobile-menu {
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: 100;
     position: fixed;
     padding-top: 12px;
     padding-left: 32px;
@@ -140,6 +141,10 @@
     }
 }
 
+.mobile-menu__link--accent {
+    color: var(--color-primary-dark);
+}
+
 .mobile-btn {
     display: flex;
     align-items: center;
@@ -154,6 +159,15 @@
     background-color: var(--color-primary-yellow);
     border-radius: 10px;
 
+    &:hover,
+    &:focus {
+        background-color: #0A8817;
+    }
+
+    &:focus {
+        color: #ffffff;
+    }
+
     @include tablett {
         display: none;
     }
@@ -161,7 +175,7 @@
 
 .hero {
     position: relative;
-    padding-top: 47px;
+    padding-top: 50px;
     background-image: url(../images/hero-header/background-mob.png);
     background-repeat: no-repeat;
     background-position: bottom;
@@ -173,22 +187,16 @@
 
     @include tablett {
         background-image: url(../images/hero-header/background-tab.png);
+        padding-top: 16px;
 
         @include retina {
             background-image: url(../images/hero-header/background-tab2x.png);
         }
     }
 
-    @include tablett {
-        background-image: url(../images/hero-header/background-tab.png);
-
-        @include retina {
-            background-image: url(../images/hero-header/background-tab2x.png);
-        }
-    }
-
-    @include tablett {
+    @include desktop {
         background-image: url(../images/hero-header/background-desk.png);
+        padding-top: 45px;
 
         @include retina {
             background-image: url(../images/hero-header/background-desk2x.png);
@@ -227,16 +235,46 @@
     }
 }
 
+.hero-link__list {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 236px;
+
+    @include tablett {
+        margin-bottom: 176px;
+    }
+
+    @include desktop {
+        gap: 34px;
+        margin-bottom: 332px;
+    }
+}
+
 .hero__btn {
-    min-width: 108px;
-    min-height: 38px;
-    margin-right: 12px;
+    max-width: 108px;
+    padding: 10px 23px;
     background-color: transparent;
     border: 2px solid var(--color-primary-yellow);
     border-radius: 8px;
+
+    &:hover {
+        border-color: #0A8817;
+    }
+
+    &:focus {
+        border-color: #0A8817;
+        color: #ffffff;
+    }
+
+    @include desktop {
+        max-width: 134px;
+        min-height: 42px;
+    }
 }
 
 .hero__link {
+    display: block;
     font-weight: 600;
     font-size: 12px;
     line-height: calc(15px / 12px);
@@ -254,9 +292,32 @@
     color: var(--color-primary-yellow);
     text-decoration: underline;
 
+    &:hover {
+        color: #0A8817;
+
+    }
+
     @include desktop {
         font-size: 14px;
         line-height: calc(17px / 14px);
+    }
+}
+
+.hero-text__wrap {
+    position: absolute;
+    bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+
+    @include tablett {
+        gap: 32px;
+
+    }
+
+    @include desktop {
+        gap: 12px;
+        bottom: 60;
     }
 }
 
@@ -326,17 +387,26 @@
     display: none;
 
     @include tablett {
+        position: absolute;
+        bottom: 12;
         display: block;
         margin-top: 12px;
     }
 
     @include desktop {
-        margin-top: 24px;
+        bottom: 24;
     }
 }
 
 .ice-cream {
+    display: block;
     position: absolute;
     bottom: 0;
-    right: 60;
+    left: 55%;
+    transform: translateX(-50%);
+
+    @include tablett {
+        left: 54%;
+        transform: none;
+    }
 }
