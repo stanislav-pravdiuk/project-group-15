@@ -1,18 +1,345 @@
 .products {
-  background-color: var(--color-primary-green);
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-position-y: -150px;
+  background-size: cover;
+  background-image: url(../images/backraund/background-mobile.jpg);
+
+  @include retina {
+    background-image: url(../images/backraund/background-mobile@2x.jpg);
+  }
+
+  @include tablett {
+    background-image: url(../images/backraund/background-tablet.jpg);
+    @include retina {
+      background-image: url(../images/backraund/background-tablet@2x.jpg);
+    }
+  }
+
+  @include desktop {
+    background-image: url(../images/backraund/background-desctop.jpg);
+    @include retina {
+      background-image: url(../images/backraund/background-desctop@2x.jpg);
+    }
+  }
 }
 
 .products__label {
-  @include font(800, 30px, calc(37 / 30), 0.04em);
   color: var(--color-primary-dark);
   text-align: center;
   text-transform: uppercase;
+  padding-top: 60px;
+  padding-bottom: 12px;
+  @include font(800, 18px, calc(22 / 18), null);
+
+  @include tablett {
+    @include font(800, 22px, calc(27 / 22), null);
+  }
+
+  @include desktop {
+    @include font(800, 30px, calc(37 / 30), 0.04em);
+  }
 }
 
 .products__header {
   font-family: var(--font-header);
-  @include font(400, 36px, calc(45 / 36), 0.06em);
   text-align: center;
   text-transform: uppercase;
   color: var(--color-primary-dark);
+  @include font(400, 30px, calc(38 / 30), 0.04em);
+
+  @include tablett {
+    @include font(400, 34px, calc(43 / 34), 0.04em);
+  }
+
+  @include desktop {
+    @include font(400, 36px, calc(45 / 36), 0.06em);
+  }
+}
+
+.products__bloque {
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 60px;
+  // outline: dashed 1px cyan;
+  @include tablett {
+    padding-top: 80px;
+  }
+
+  @include desktop {
+    padding-top: 120px;
+  }
+}
+
+.products__list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+
+  @include tablett {
+    gap: 16px;
+  }
+
+  @include desktop {
+    gap: 29px;
+  }
+}
+
+.products__card {
+  position: relative;
+  margin: 0 auto;
+  height: 528px;
+  padding-top: 11px;
+  outline: dashed 1px tomato;
+
+  @include tablett {
+    padding-top: 12px;
+    height: 548px;
+  }
+
+  @include desktop {
+    padding-top: 16px;
+    height: 719px;
+  }
+}
+
+.products__link {
+  text-decoration: none;
+
+  &::after {
+    content: '';
+    width: 40px;
+    height: 16px;
+    background-image: url(../images/products/arrow.svg);
+    bottom: 16px;
+    left: calc(50% - 20px);
+    position: absolute;
+
+    @include tablett {
+      bottom: 12px;
+    }
+
+    @include desktop {
+      bottom: 60px;
+    }
+  }
+}
+
+.products__image--icecream-color {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @include desktop {
+    width: 302px;
+    height: 302px;
+  }
+
+  background: linear-gradient(
+      0deg,
+      rgba(156, 190, 143, 0.7),
+      rgba(156, 190, 143, 0.7)
+    ),
+    #d9d9d9;
+  box-shadow: 0px 5.34219px 20.0332px rgba(10, 136, 23, 0.25);
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: -11px;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../images/products/kelsey-curtis-G5ZenftPPOA-unsplash2.jpg);
+    @include retina {
+      background-image: url(../images/products/kelsey-curtis-G5ZenftPPOA-unsplash2@2x.jpg);
+    }
+    @include tablett {
+      top: -12px;
+    }
+    @include desktop {
+      top: -16px;
+      width: 302px;
+      height: 302px;
+      background-image: url(../images/products/kelsey-curtis-G5ZenftPPOA-unsplash2-desktop.jpg);
+      @include retina {
+        background-image: url(../images/products/kelsey-curtis-G5ZenftPPOA-unsplash2-desktop@2x.jpg);
+      }
+    }
+  }
+}
+
+.products__image--icecoffee-color {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @include desktop {
+    width: 302px;
+    height: 302px;
+  }
+
+  background: linear-gradient(
+      0deg,
+      rgba(248, 210, 78, 0.7),
+      rgba(248, 210, 78, 0.7)
+    ),
+    #d9d9d9;
+  box-shadow: 0px 5.40397px 20.2649px rgba(153, 114, 23, 0.25);
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: -11px;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../images/products/pariwat-pannium-0_qbeF_0zn8-unsplash1.jpg);
+    @include retina {
+      background-image: url(../images/products/pariwat-pannium-0_qbeF_0zn8-unsplash1@2x.jpg);
+    }
+    @include tablett {
+      top: -12px;
+    }
+    @include desktop {
+      top: -16px;
+      width: 302px;
+      height: 302px;
+      background-image: url(../images/products/pariwat-pannium-0_qbeF_0zn8-unsplash1-desktop.jpg);
+      @include retina {
+        background-image: url(../images/products/pariwat-pannium-0_qbeF_0zn8-unsplash1-desktop@2x.jpg);
+      }
+    }
+  }
+}
+
+.products__image--milkshake-color {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @include desktop {
+    width: 302px;
+    height: 302px;
+  }
+
+  background: linear-gradient(
+      0deg,
+      rgba(213, 117, 63, 0.7),
+      rgba(213, 117, 63, 0.7)
+    ),
+    #d9d9d9;
+  box-shadow: 0px 5.41333px 20.3px rgba(0, 0, 0, 0.25);
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: -11px;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../images/products/victor-rutka-4FujjkcI40g-unsplash1.jpg);
+    @include retina {
+      background-image: url(../images/products/victor-rutka-4FujjkcI40g-unsplash1@2x.jpg);
+    }
+    @include tablett {
+      top: -12px;
+    }
+    @include desktop {
+      top: -16px;
+      width: 302px;
+      height: 302px;
+      background-image: url(../images/products/victor-rutka-4FujjkcI40g-unsplash1-desktop.jpg);
+      @include retina {
+        background-image: url(../images/products/victor-rutka-4FujjkcI40g-unsplash1-desktop@2x.jpg);
+      }
+    }
+  }
+}
+
+.products__card-form {
+  width: 280px;
+  height: 420px;
+  border-radius: 24px;
+  padding: 123px 40px 16px 40px;
+  transform: translateY(100px);
+
+  @include tablett {
+    width: 224px;
+    height: 428px;
+    padding: 108px 26px 12px 26px;
+    transform: translateY(108px);
+  }
+
+  @include desktop {
+    width: 370px;
+    height: 536px;
+    padding: 165px 64px 60px 64px;
+    transform: translateY(167px);
+  }
+}
+
+.icecream-color {
+  background-color: var(--color-ice-cream);
+}
+
+.icecoffee-color {
+  background-color: var(--color-ice-coffee);
+}
+
+.milkshake-color {
+  background-color: var(--color-milkshake);
+}
+
+.products__list-header {
+  @include font(700, 20px, calc(24 / 20), 0.04em);
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 40px;
+  color: var(--color-primary-dark);
+
+  @include tablett {
+    @include font(700, 22px, calc(27 / 22), 0.04em);
+  }
+
+  @include desktop {
+    @include font(700, 30px, calc(37 / 30), 0.04em);
+  }
+}
+
+.products__detail {
+  @include font(null, 14px, 176%, 0.04em);
+  color: var(--color-primary-dark);
+  text-align: center;
+
+  @include desktop {
+    @include font(null, 16px, 176%, 0.04em);
+  }
 }

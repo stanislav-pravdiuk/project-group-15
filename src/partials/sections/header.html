@@ -1,0 +1,69 @@
+<header class="header container">
+    <picture>
+        <source srcset="./images/hero-header/logo-desk.png 1x, ./images/hero-header/logo-desk2x.png 2x"
+            media="(min-width: 1200px)">
+        <source srcset="./images/hero-header/logo-tab.png 1x, ./images/hero-header/logo-tab2x.png 2x"
+            media="(min-width: 768px)">
+        <source srcset="./images/hero-header/logo-mob.png 1x, ./images/hero-header/logo-mob2x.png"
+            media="(max-width: 767px)">
+        <img src="./images/hero-header/logo-mob.png" alt="logo">
+    </picture>
+    <button type="button" class="menu-open" data-menu-open>
+        <svg width="32" height="32">
+            <use href="./images/hero-header/icons-hero-header.svg#icon-menu"></use>
+        </svg>
+    </button>
+    <ul class="header__list">
+        <li>
+            <a href="" class="heder__link">Home</a>
+        </li>
+        <li>
+            <a href="" class="heder__link">How it’s made?</a>
+        </li>
+        <li>
+            <a href="" class="heder__link">Our products</a>
+        </li>
+        <li>
+            <a href="" class="heder__link">Contact</a>
+        </li>
+    </ul>
+    <button type="button" class="header__btn">
+        Buy now
+        <svg width="12" height="12" class="btn-item">
+            <use href="./images/hero-header/icons-hero-header.svg#icon-sign"></use>
+        </svg>
+    </button>
+    <div class="mobile-menu is-hidden" data-menu>
+        <picture>
+            <source srcset="./images/hero-header/logo-tab.png 1x, ./images/hero-header/logo-tab2x.png 2x"
+                media="(min-width: 768px)">
+            <source srcset="./images/hero-header/logo-mob.png 1x, ./images/hero-header/logo-mob2x.png"
+                media="(max-width: 767px)">
+            <img src="./images/hero-header/logo-mob.png" alt="logo">
+        </picture>
+        <button type="button" class="menu-close" data-menu-close>
+            <svg width="32" height="32">
+                <use href="./images/hero-header/icons-hero-header.svg#icon-cross"></use>
+            </svg>
+        </button>
+        <ul class="mobile-menu__list">
+            <li>
+                <a href="" class="mobile-menu__link">Home</a>
+            </li>
+            <li>
+                <a href="" class="mobile-menu__link">How it’s made?</a>
+            </li>
+            <li>
+                <a href="" class="mobile-menu__link">Our products</a>
+            </li>
+            <li>
+                <a href="" class="mobile-menu__link">Contact</a>
+            </li>
+        </ul>
+        <button type="button" class="mobile-btn">
+            Buy now
+            <svg width="12" height="12" class="btn-item">
+                <use href="./images/hero-header/icons-hero-header.svg#icon-sign"></use>
+            </svg>
+        </button>
+</header>
