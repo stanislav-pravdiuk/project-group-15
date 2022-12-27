@@ -14,6 +14,9 @@
 // }
 
 .modal-buy-now {
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
   position: relative;
   // position: absolute;
   // top: 50%;
@@ -28,10 +31,8 @@
   @include tablett {
     width: 568px;
     height: auto;
-    padding: 28px;
+    padding: 32px 54px;
   }
-
-  // opacity: 0;
 
   .list {
     list-style: none;
@@ -48,27 +49,25 @@
   display: flex;
   justify-content: center;
   padding-top: 20px;
-  outline: dashed 1px cyan;
+  // outline: dashed 1px cyan;
+
+  @include tablett {
+    padding-top: 40px;
+  }
 }
 
 .modal-buy-now__list {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  //  margin: 0 auto;
-  // padding-top: 51px;
   padding-bottom: 20px;
   gap: 20px;
 
   @include tablett {
-    // padding-top: 120px;
     gap: 32px;
+    flex-wrap: nowrap;
+    padding-bottom: 40px;
   }
-
-  // @include desktop {
-  //   // padding-top: 183px;
-  //   gap: 29px;
-  // }
 }
 
 .modal-buy-now__card {
@@ -79,14 +78,13 @@
 
   @include desktop {
     padding-top: 16px;
-    height: 719px;
+    margin: 0;
   }
 }
 
 .modal-buy-now__image--icecream-color {
   width: 132px;
   height: 132px;
-  // background-color: rgba(248, 210, 78, 0.7);
   border-radius: 50%;
   position: absolute;
   z-index: 1;
@@ -116,20 +114,19 @@
     height: 132px;
     border-radius: 50%;
     background-image: url('../images/buy-now/kelsey.jpg');
-    @include desktop {
-      top: -7px;
-      width: 132px;
-      height: 132px;
-      background-image: url('../images/buy-now/kelsey@2x.jpg');
-    }
+
+    // @include desktop {
+    //   top: -7px;
+    //   width: 132px;
+    //   height: 132px;
+    //   background-image: url('../images/buy-now/kelsey@2x.jpg');
+    // }
   }
 }
 
 .modal-buy-now__image--icecoffee-color {
   width: 132px;
   height: 132px;
-  // background-color: var(--color-ice-coffee);
-  // border: 1px solid rgba(212, 20, 67, 0.1);
   border-radius: 15px;
   border-radius: 50%;
   position: absolute;
@@ -137,10 +134,6 @@
   left: 50%;
   transform: translateX(-50%);
 
-  @include desktop {
-    width: 132px;
-    height: 132px;
-  }
 
   background: linear-gradient(
       0deg,
@@ -160,12 +153,12 @@
     height: 132px;
     border-radius: 50%;
     background-image: url('../images/buy-now/pariwat.jpg');
-    @include desktop {
-      top: -7px;
-      width: 132px;
-      height: 132px;
-      background-image: url('../images/buy-now/pariwat@2x.jpg');
-    }
+    // @include desktop {
+    //   top: -7px;
+    //   width: 132px;
+    //   height: 132px;
+    //   background-image: url('../images/buy-now/pariwat@2x.jpg');
+    // }
   }
 }
 
@@ -179,10 +172,6 @@
   left: 50%;
   transform: translateX(-50%);
 
-  @include desktop {
-    width: 132px;
-    height: 132px;
-  }
 
   background: linear-gradient(
       0deg,
@@ -202,12 +191,12 @@
     height: 132px;
     border-radius: 50%;
     background-image: url('../images/buy-now/victor.jpg');
-    @include desktop {
-      // top: -7px;
-      // width: 132px;
-      // height: 132px;
-      background-image: url('../images/buy-now/victor@2x.jpg');
-    }
+    // @include desktop {
+    //   // top: -7px;
+    //   // width: 132px;
+    //   // height: 132px;
+    //   background-image: url('../images/buy-now/victor@2x.jpg');
+    // }
   }
 }
 
@@ -215,37 +204,24 @@
   width: 132px;
   height: 132px;
   border-radius: 15px;
-  // border-radius: 24px;
   padding: 96px 16px 20px 16px;
   transform: translateY(60px);
-
-  @include tablett {
-    width: 132px;
-    height: 132px;
-    padding: 96px 16px 20px 16px;
-  }
-
-  @include desktop {
-    width: 132px;
-    height: 132px;
-    padding: 96px 16px 20px 16px;
-  }
 }
 
 .icecream-border-color {
   background-color: var(--color-primary-light);
-  border: 1px solid
+  border: 2px solid
   #96AF8C;
 }
 
 .icecoffee-border-color {
   background-color: var(--color-ice-coffee);
-  border: 1px solid var(--color-ice-coffee);
+  border: 2px solid var(--color-ice-coffee);
 }
 
 .milkshake-border-color {
   background-color: var(--color-primary-light);
-  border: 1px solid var(--color-milkshake);
+  border: 2px solid var(--color-milkshake);
 }
 
 .modal-buy-now__list-header {
@@ -253,32 +229,19 @@
   color: var(--color-primary-dark);
   text-align: center;
   text-transform: uppercase;
-  // padding-bottom: 20px;
   width: 106px;
   height: 20px;
 }
-
-
-
-
-// .modal-buy-now__link {
-//   display: block;
-//   text-align: center;
-
-//   color: var(--color-primary-dark);
-//   font-weight: 700;
-//   font-size: 16px;
-//   line-height: calc(20 / 16);
-//   letter-spacing: 0.04em;
-//   text-transform: uppercase;
-// }
 
 .contact-form__title {
   display: block;
   color: var(--color-primary-dark);
   text-align: center;
-  font-size: 16px;
-  line-height: calc(24 / 16);
+  @include font(700, 16px, calc(24 / 16), 0.04em);
+
+  @include tablett {
+    @include font(700, 20px, calc(28 / 20), 0.04em);
+  }
 }
 
 .contact-form__input {
@@ -290,8 +253,16 @@
   outline: none;
 
   color: var(--color-primary-dark);
-  font-size: 12px;
-  line-height: calc(17 / 12);
+  @include font(null, 12px, calc(17 / 12), null);
+
+  @include tablett {
+    @include font(null, 14px, calc(20 / 14), null);
+    width: 368px;
+    height: 42px;
+    margin: 0 auto;
+    display: block;
+    padding: 11px 152px 11px 16px;
+  }
 }
 
 .contact-form__input-phone {
@@ -305,8 +276,16 @@
   margin-bottom: 20px;
 
   color: var(--color-primary-dark);
-  font-size: 12px;
-  line-height: calc(17 / 12);
+  @include font(null, 12px, calc(17 / 12), null);
+
+  @include tablett {
+    @include font(null, 14px, calc(20 / 14), null);
+    width: 368px;
+    height: 42px;
+    margin: 16px auto;
+    display: block;
+    padding: 11px 152px 11px 16px;
+  }
 }
 
 .contact-form__textarea {
@@ -321,8 +300,17 @@
   overflow-y: hidden;
 
   color: var(--color-primary-dark);
-  font-size: 12px;
-  line-height: calc(17 / 12);
+  @include font(null, 12px, calc(17 / 12), null);
+
+  @include tablett {
+    @include font(null, 14px, calc(20 / 14), null);
+    width: 368px;
+    height: 84px;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 32px;
+    padding: 11px 152px 53px 16px;
+  }
 }
 
 .contact-form__input:focus,
@@ -342,12 +330,14 @@
   height: 42px;
 
   color: var(--color-primary-dark);
+  @include font(600, 12px, calc(15 / 12), null);
   background-color: var(--color-primary-yellow);
   border: none;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: calc(15 / 12);
   cursor: pointer;
+
+  @include tablett {
+    @include font(600, 14px, calc(17 / 14), null);
+  }
 }
 
 .contact-form__primary-button:hover,
