@@ -1,112 +1,79 @@
-<!-- <div class="backdrop is-hidden" data-modal> -->
-<div class="modal-buy-now">
-  <button class="button-close" type="button" data-modal-close>
-    <svg class="button-close__icon" width="20" height="20">
-      <use href="/src/images/buy-now.svg/symbol-defs.svg#icon-close-line"></use>
-    </svg>
-  </button>
-  <strong class="contact-form__title">Buy now</strong>
-  <!-- <div class="modal-buy-now__bloque">
-    <ul class="modal-buy-now__list list">
-      <li class="modal-buy-now__item">
-        <div class="modal-buy-now__card">
-          <div class="modal-buy-now__image">
-            <img src="/src/images/buy-now/kelsey.jpg" alt="foto ice cream" />
-          </div>
+<div class="backdrop is-hidden" data-modal>
+  <div class="modal-buy-now">
+    <button class="button-close" type="button" data-modal-close>
+      <svg class="button-close__icon" width="20" height="20">
+        <use
+          href="/src/images/buy-now.svg/symbol-defs.svg#icon-close-line"
+        ></use>
+      </svg>
+    </button>
+    <strong class="contact-form__title">Buy now</strong>
+    <div class="modal-buy-now__bloque">
+      <ul class="modal-buy-now__list list">
+        <li class="modal-buy-now__item">
+          <img
+            class="modal-buy-now__img"
+            src="/src/images/buy-now/kelsey.jpg"
+            alt="foto ice cream"
+          />
           <div class="modal-buy-now__circle-green"></div>
           <div class="modal-buy-now__square-green">
             <a href="#" class="modal-buy-now__link link">ice cream</a>
           </div>
-        </div>
-      </li>
-      <li class="modal-buy-now__item">
-        <div class="modal-buy-now__card">
-          <div class="modal-buy-now__image">
-            <img src="/src/images/buy-now/pariwat.jpg" alt="foto ice koffee" />
-          </div>
+        </li>
+        <li class="modal-buy-now__item">
+          <img src="/src/images/buy-now/pariwat.jpg" alt="foto ice koffee" />
           <div class="modal-buy-now__circle-yellow"></div>
           <div class="modal-buy-now__square-yellow">
             <a href="#" class="modal-buy-now__link link">ice coffee</a>
           </div>
-        </div>
-      </li>
-      <li class="modal-buy-now__item">
-        <div class="modal-buy-now__card">
-          <div class="modal-buy-now__image">
-            <img
-              src="/src/images/buy-now/victor.jpg"
-              alt="foto ice milkshake"
-            />
-          </div>
+        </li>
+        <li class="modal-buy-now__item">
+          <img src="/src/images/buy-now/victor.jpg" alt="foto ice milkshake" />
           <div class="modal-buy-now__circle-brown"></div>
           <div class="modal-buy-now__square-brown">
             <a href="#" class="modal-buy-now__link link">milkshake</a>
           </div>
+        </li>
+      </ul>
+    </div>
+    <form name="contact-form">
+      <div class="contact-form__container">
+        <div class="contact-form__control">
+          <input
+            class="contact-form__input"
+            id="person-name"
+            type="text"
+            name="person-name"
+            placeholder="Name"
+          />
         </div>
-      </li>
-    </ul>
-  </div> -->
+      </div>
 
-  <div class="modal-buy-now__bloque">
-    <ul class="modal-buy-now__list">
-      <li class="modal-buy-now__card">
-        <div class="modal-buy-now__image--icecream-color"></div>
-        <div class="modal-buy-now__card-form icecream-color">
-          <h3 class="modal-buy-now__list-header">Ice Cream</h3>
+      <div class="contact-form__container">
+        <div class="contact-form__control">
+          <input
+            class="contact-form__input-phone"
+            id="person-phone"
+            type="tel"
+            name="person-phone"
+            placeholder="Phone"
+          />
         </div>
-      </li>
-      <li class="modal-buy-now__card">
-        <div class="modal-buy-now__image--icecoffee-color"></div>
-        <div class="modal-buy-now__card-form icecoffee-color">
-          <h3 class="modal-buy-now__list-header">Ice Coffee</h3>
+      </div>
+
+      <div class="contact-form__container">
+        <div class="contact-form__control">
+          <textarea
+            class="contact-form__textarea"
+            id="person-comment"
+            name="person-comment"
+            placeholder="Comment"
+          ></textarea>
         </div>
-      </li>
-      <li class="modal-buy-now__card">
-        <div class="modal-buy-now__image--milkshake-color"></div>
-        <div class="modal-buy-now__card-form milkshake-color">
-          <h3 class="modal-buy-now__list-header">Milkshakes</h3>
-        </div>
-      </li>
-    </ul>
+      </div>
+
+      <button class="contact-form__primary-button" type="submit">Submit</button>
+    </form>
   </div>
-
-  <form name="contact-form">
-    <div class="contact-form__container">
-      <div class="contact-form__control">
-        <input
-          class="contact-form__input"
-          id="person-name"
-          type="text"
-          name="person-name"
-          placeholder="Name"
-        />
-      </div>
-    </div>
-
-    <div class="contact-form__container">
-      <div class="contact-form__control">
-        <input
-          class="contact-form__input-phone"
-          id="person-phone"
-          type="tel"
-          name="person-phone"
-          placeholder="Phone"
-        />
-      </div>
-    </div>
-
-    <div class="contact-form__container">
-      <div class="contact-form__control">
-        <textarea
-          class="contact-form__textarea"
-          id="person-comment"
-          name="person-comment"
-          placeholder="Comment"
-        ></textarea>
-      </div>
-    </div>
-
-    <button class="contact-form__primary-button" type="submit">Submit</button>
-  </form>
 </div>
-<!-- </div> -->
