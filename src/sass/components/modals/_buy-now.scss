@@ -1,19 +1,16 @@
-.backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-
-.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
+// .backdrop {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   z-index: 1;
+// }
 
 .modal-buy-now {
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
   position: relative;
   // position: absolute;
   // top: 50%;
@@ -25,98 +22,235 @@
   width: 280px;
   padding: 28px;
 
-  // opacity: 0;
+  @include tablett {
+    width: 568px;
+    height: auto;
+    padding: 32px 54px;
+  }
 
-  .list {
-    list-style: none;
+  // .list {
+  //   list-style: none;
+  //   margin: 0;
+  //   padding: 0;
+  // }
+
+  // .link {
+  //   text-decoration: none;
+  // }
+}
+
+.modal-buy-now__bloque {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  // outline: dashed 1px cyan;
+
+  @include tablett {
+    padding-top: 40px;
+  }
+}
+
+.modal-buy-now__list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+  gap: 20px;
+
+  @include tablett {
+    gap: 32px;
+    flex-wrap: nowrap;
+    padding-bottom: 40px;
+  }
+}
+
+.modal-buy-now__card {
+  position: relative;
+  margin: 0 auto;
+  height: 198px;
+  padding-top: 11px;
+
+  @include desktop {
+    padding-top: 16px;
     margin: 0;
-    padding: 0;
-  }
-
-  .link {
-    text-decoration: none;
   }
 }
 
-// .modal-buy-now__list {
-//   position: relative;
-// }
-
-// .modal-buy-now__item {
-//   position: relative;
-// }
-
-// .modal-buy-now__img {
-//   position: relative;
-//   z-index: 1;
-// }
-
-.modal-buy-now__circle-green {
-  // position: absolute;
-  top: 1px;
+.modal-buy-now__image--icecream-color {
   width: 132px;
   height: 132px;
-  background-color: rgba(156, 190, 143, 0.7);
   border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @include desktop {
+    width: 132px;
+    height: 132px;
+  }
+
+  background: linear-gradient(
+      0deg,
+      rgba(156, 190, 143, 0.7),
+      rgba(156, 190, 143, 0.7)
+    ),
+    #d9d9d9;
+  box-shadow: 0px 5.34219px 20.0332px rgba(10, 136, 23, 0.25);
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: -7px;
+    transform: translateX(-50%);
+    width: 132px;
+    height: 132px;
+    border-radius: 50%;
+    background-image: url('../images/buy-now/kelsey.jpg');
+
+    // @include desktop {
+    //   top: -7px;
+    //   width: 132px;
+    //   height: 132px;
+    //   background-image: url('../images/buy-now/kelsey@2x.jpg');
+    // }
+  }
 }
 
-.modal-buy-now__square-green {
+.modal-buy-now__image--icecoffee-color {
   width: 132px;
   height: 132px;
+  border-radius: 15px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+
+
+  background: linear-gradient(
+      0deg,
+      rgba(248, 210, 78, 0.7),
+      rgba(248, 210, 78, 0.7)
+    ),
+    #d9d9d9;
+  box-shadow: 0px 5.40397px 20.2649px rgba(153, 114, 23, 0.25);
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: -7px;
+    transform: translateX(-50%);
+    width: 132px;
+    height: 132px;
+    border-radius: 50%;
+    background-image: url('../images/buy-now/pariwat.jpg');
+    // @include desktop {
+    //   top: -7px;
+    //   width: 132px;
+    //   height: 132px;
+    //   background-image: url('../images/buy-now/pariwat@2x.jpg');
+    // }
+  }
+}
+
+.modal-buy-now__image--milkshake-color {
+  width: 132px;
+  height: 132px;
+  // background-color: rgba(213, 117, 63, 0.7);
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+
+
+  background: linear-gradient(
+      0deg,
+      rgba(213, 117, 63, 0.7),
+      rgba(213, 117, 63, 0.7)
+    ),
+    #d9d9d9;
+  box-shadow: 0px 5.41333px 20.3px rgba(0, 0, 0, 0.25);
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: -7px;
+    transform: translateX(-50%);
+    width: 132px;
+    height: 132px;
+    border-radius: 50%;
+    background-image: url('../images/buy-now/victor.jpg');
+    // @include desktop {
+    //   // top: -7px;
+    //   // width: 132px;
+    //   // height: 132px;
+    //   background-image: url('../images/buy-now/victor@2x.jpg');
+    // }
+  }
+}
+
+.modal-buy-now__card-form {
+  width: 132px;
+  height: 132px;
+  border-radius: 15px;
+  padding: 96px 16px 20px 16px;
+  transform: translateY(60px);
+}
+
+.icecream-border-color {
   background-color: var(--color-primary-light);
-  border: 1px solid #96AF8C;
-  border-radius: 15px;
+  border: 2px solid
+  #96AF8C;
 }
 
-.modal-buy-now__circle-yellow {
-  width: 132px;
-  height: 132px;
-  background-color: rgba(248, 210, 78, 0.7);
-  border-radius: 50%;
+.icecream-border-color:hover,
+.icecream-border-color:focus {
+  background-color: #96AF8C;
 }
 
-.modal-buy-now__square-yellow {
-  width: 132px;
-  height: 132px;
-  background-color: var(--color-ice-coffee);
-  border: 1px solid rgba(212, 20, 67, 0.1);
-  border-radius: 15px;
+.icecoffee-border-color {
+  background-color:var(--color-primary-light);
+  border: 2px solid var(--color-ice-coffee);
 }
 
-.modal-buy-now__circle-brown {
-  width: 132px;
-  height: 132px;
-  background-color: rgba(213, 117, 63, 0.7);
-  border-radius: 50%;
+.icecoffee-border-color:hover,
+.icecoffee-border-color:focus {
+  background-color:var(--color-ice-coffee);
 }
 
-.modal-buy-now__square-brown {
-  width: 132px;
-  height: 132px;
+.milkshake-border-color {
   background-color: var(--color-primary-light);
-  border: 1px solid var(--color-milkshake);
-  border-radius: 15px;
+  border: 2px solid var(--color-milkshake);
 }
 
-.modal-buy-now__link {
-  display: block;
-  text-align: center;
-  margin-top: 96px;
+.milkshake-border-color:hover,
+.milkshake-border-color:focus {
+  background-color: var(--color-milkshake);
+}
 
+.modal-buy-now__list-header {
+  @include font(700, 16px, calc(20 / 16), 0.04em);
   color: var(--color-primary-dark);
-  font-weight: 700;
-  font-size: 16px;
-  line-height: calc(20 / 16);
-  letter-spacing: 0.04em;
+  text-align: center;
   text-transform: uppercase;
+  width: 106px;
+  height: 20px;
 }
 
 .contact-form__title {
   display: block;
   color: var(--color-primary-dark);
   text-align: center;
-  font-size: 16px;
-  line-height: calc(24 / 16);
+  @include font(700, 16px, calc(24 / 16), 0.04em);
+
+  @include tablett {
+    @include font(700, 20px, calc(28 / 20), 0.04em);
+  }
 }
 
 .contact-form__input {
@@ -128,8 +262,16 @@
   outline: none;
 
   color: var(--color-primary-dark);
-  font-size: 12px;
-  line-height: calc(17 / 12);
+  @include font(null, 12px, calc(17 / 12), null);
+
+  @include tablett {
+    @include font(null, 14px, calc(20 / 14), null);
+    width: 368px;
+    height: 42px;
+    margin: 0 auto;
+    display: block;
+    padding: 11px 152px 11px 16px;
+  }
 }
 
 .contact-form__input-phone {
@@ -143,8 +285,16 @@
   margin-bottom: 20px;
 
   color: var(--color-primary-dark);
-  font-size: 12px;
-  line-height: calc(17 / 12);
+  @include font(null, 12px, calc(17 / 12), null);
+
+  @include tablett {
+    @include font(null, 14px, calc(20 / 14), null);
+    width: 368px;
+    height: 42px;
+    margin: 16px auto;
+    display: block;
+    padding: 11px 152px 11px 16px;
+  }
 }
 
 .contact-form__textarea {
@@ -159,8 +309,17 @@
   overflow-y: hidden;
 
   color: var(--color-primary-dark);
-  font-size: 12px;
-  line-height: calc(17 / 12);
+  @include font(null, 12px, calc(17 / 12), null);
+
+  @include tablett {
+    @include font(null, 14px, calc(20 / 14), null);
+    width: 368px;
+    height: 84px;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 32px;
+    padding: 11px 152px 53px 16px;
+  }
 }
 
 .contact-form__input:focus,
@@ -180,12 +339,14 @@
   height: 42px;
 
   color: var(--color-primary-dark);
+  @include font(600, 12px, calc(15 / 12), null);
   background-color: var(--color-primary-yellow);
   border: none;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: calc(15 / 12);
   cursor: pointer;
+
+  @include tablett {
+    @include font(600, 14px, calc(17 / 14), null);
+  }
 }
 
 .contact-form__primary-button:hover,
