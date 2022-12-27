@@ -1,0 +1,128 @@
+.advantages {
+    background-color: var(--color-primary-green);
+    background-size: auto;
+        @media screen and (min-width: 480px) {
+            max-width: 480px;
+        }
+        @media screen and (min-width: 768px) {
+            max-width: 768px;
+        }
+            @media screen and (min-width: 1200px) {
+            max-width: 1200px;
+        }
+}
+
+.advantages__container{
+}
+.advantages__title {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    -webkit-clip-path: inset(100%);
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.advantages__list {
+    list-style: none;
+    padding: 0;
+    @media screen and (min-width: 768px){
+        display: flex;
+        justify-content: center;
+        gap: 80px;
+    }
+    @media screen and (min-width: 1200px){
+        gap: 32px;
+    }
+}
+
+.advantages__item {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.advantes__conatiner-list {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.advantages__icon {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: #131313;
+    border-radius: 50%;
+    background-color: #F8D24E;
+}
+
+
+.advantages__subtitle {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.2222222222;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #FCFCFC;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.advantages__subtitle {
+    font-weight: 700;
+    line-height: 170%;
+    text-align: center;
+    color: #FCFCFC;
+    @media screen and (min-width: 768px) {
+        margin-bottom: 12px;
+        margin-top: 32px;
+        font-size: 48px;
+        line-height: calc(59 / 48);
+    } 
+    @media screen and (min-width: 1200px) {
+        margin-top: 40px;
+        font-size: 58px;
+        line-height: calc(71 / 58);
+    }
+}
+
+.advantages__description {
+    width: 230px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 170%;
+    text-align: center;
+    color: #FCFCFC;
+    // margin-bottom: 22px;
+    @media screen and (min-width: 768px){
+        width: 152px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 174%;
+        margin-bottom: 0;
+    }
+    @media screen and (min-width: 1200px) {
+        width: 360px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 176%;
+    }
+}
+.advantages__description:not(last-child){
+    margin-bottom: 22px;
+}
