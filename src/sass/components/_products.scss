@@ -63,7 +63,7 @@
   justify-content: center;
   padding-top: 40px;
   padding-bottom: 60px;
-  // outline: dashed 1px cyan;
+
   @include tablett {
     padding-top: 80px;
   }
@@ -93,7 +93,7 @@
   margin: 0 auto;
   height: 528px;
   padding-top: 11px;
-  outline: dashed 1px tomato;
+  // outline: dashed 1px tomato;
 
   @include tablett {
     padding-top: 12px;
@@ -341,5 +341,25 @@
 
   @include desktop {
     @include font(null, 16px, 176%, 0.04em);
+  }
+}
+
+.products__button {
+  width: 40px;
+  height: 16px;
+  border: 0;
+  padding: 0;
+  background-image: url(../images/products/arrow.svg);
+  position: absolute;
+  left: calc(50% - 20px);
+  cursor: pointer;
+  bottom: 16px;
+
+  @include tablett {
+    bottom: 12px;
+  }
+
+  @include desktop {
+    bottom: 60px;
   }
 }
