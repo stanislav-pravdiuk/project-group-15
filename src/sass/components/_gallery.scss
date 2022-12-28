@@ -1,8 +1,14 @@
 .section-gallery {
   background-color: #84a178;
   height: 32px;
+  margin-top: 32px;
   @include tablett {
+    height: 144px;
+    margin-top: 60px;
+  }
+  @include desktop {
     height: 98px;
+    margin-top: 80px ;
   }
 }
 .container-gallery {
@@ -22,8 +28,9 @@
 
 .gallery-images {
   width: 100%;
-  animation-name: vision;
-  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  animation-name: gallery;
+  animation-timing-function: ease;
+  animation-direction: normal;
   animation-duration: 12s;
   animation-iteration-count: infinite;
   position: absolute;
@@ -34,14 +41,15 @@
   max-width: 100%;
   border-radius: 8px;
 
-  @include tablett() {
-    border-radius: 25px;
+  @include tablett {
+    border-radius: 18px;
   }
-  @include desktop() {
+  @include desktop {
+    border-radius: 24px;
     max-width: 1013px;
   }
 }
-@keyframes vision {
+@keyframes gallery {
   0% {
     opacity: 1;
   }
@@ -58,12 +66,12 @@
     opacity: 1;
   }
 }
-.gallery-images:nth-of-type(3) {
+.gallery-images:nth-of-type(1) {
   animation-delay: 0s;
 }
 .gallery-images:nth-of-type(2) {
   animation-delay: 5s;
 }
-.gallery-images:nth-of-type(1) {
+.gallery-images:nth-of-type(3) {
   animation-delay: 10s;
 }
