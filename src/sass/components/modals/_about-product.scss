@@ -203,6 +203,10 @@
   }
 }
 
+.about-form__input:invalid:not(:focus):not(:placeholder-shown) {
+  background-color: rgb(255, 0, 0);
+}
+
 .about-form__input::placeholder,
 .about-form__textarea::placeholder {
   @include font(400, 14px, calc(20 / 14), 0.04em);
