@@ -1,0 +1,40 @@
+<button
+  style="
+    left: 0;
+    top: 100px;
+    border-radius: 50%;
+    background: rgba(72, 148, 43, 0.3);
+  "
+  class="our-location__buttun-close"
+  type="button"
+  data-modal-our-location-open
+>
+  m4
+</button>
+<div class="our-location is-hidden" data-modal-our-location>
+  <div class="our-location__window">
+    <button
+      class="our-location__buttun-close"
+      type="button"
+      data-modal-our-location-close
+    >
+      <svg class="our-location__close-icon" width="14" height="14">
+        <use
+          href="./images/read-more/read-mode-close.svg#icon-modal-close"
+        ></use>
+      </svg>
+    </button>
+    <h2 class="our-location__title">Our Locations</h2>
+    <div class="our-location__plauer">
+      <iframe
+        class="our-location__map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d165489.7099705025!2d34.41715582800018!3d49.60195993006719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d825e425e6ba6b%3A0xcf3e6bdfb9e4ca82!2z0J_QvtC70YLQsNCy0LAsINCf0L7Qu9GC0LDQstGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCAzNjAwMA!5e0!3m2!1sru!2sua!4v1672220758118!5m2!1sru!2sua"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+    <button class="our-location-button" type="submit">Open map</button>
+  </div>
+</div>
