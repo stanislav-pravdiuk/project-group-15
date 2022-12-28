@@ -24,8 +24,13 @@
   gap: 16px;
   width: 100%;
   position: absolute;
-  top: -345px;
-  
+  top: -345px; 
+
+  @media screen and (max-width:767px) {
+    left: 50%;
+  transform: translateX(-50%);
+
+}
 
   
   @media screen and (min-width:768px) {
@@ -330,15 +335,18 @@ border-radius: 10px;
 }
 
 .btn__list {
-   
-      top: -100px;
+  padding-top: 935px;
    @media screen and (min-width:768px) {
+    padding-top: 278px;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       gap: 16px;
       margin-top: 0;
     }
+    @media screen and (min-width: 1200px) {
+      padding-top: 486px;
+      }
 }
 
 .contacts__list {
