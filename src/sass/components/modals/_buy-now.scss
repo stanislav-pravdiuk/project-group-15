@@ -1,4 +1,3 @@
-
 .modal-buy-now {
   position: fixed;
   top: 0;
@@ -84,12 +83,10 @@
     height: 132px;
   }
 
-  background: linear-gradient(
-      0deg,
-      rgba(156, 190, 143, 0.7),
-      rgba(156, 190, 143, 0.7)
-    ),
-    #d9d9d9;
+  background: linear-gradient(0deg,
+    rgba(156, 190, 143, 0.7),
+    rgba(156, 190, 143, 0.7)),
+  #d9d9d9;
   box-shadow: 0px 5.34219px 20.0332px rgba(10, 136, 23, 0.25);
 
   &::before {
@@ -123,11 +120,9 @@
   transform: translateX(-50%);
 
 
-  background: linear-gradient(
-      0deg,
+  background: linear-gradient(0deg,
       rgba(248, 210, 78, 0.7),
-      rgba(248, 210, 78, 0.7)
-    ),
+      rgba(248, 210, 78, 0.7)),
     #d9d9d9;
   box-shadow: 0px 5.40397px 20.2649px rgba(153, 114, 23, 0.25);
 
@@ -161,11 +156,9 @@
   transform: translateX(-50%);
 
 
-  background: linear-gradient(
-      0deg,
+  background: linear-gradient(0deg,
       rgba(213, 117, 63, 0.7),
-      rgba(213, 117, 63, 0.7)
-    ),
+      rgba(213, 117, 63, 0.7)),
     #d9d9d9;
   box-shadow: 0px 5.41333px 20.3px rgba(0, 0, 0, 0.25);
 
@@ -198,8 +191,7 @@
 
 .icecream-border-color {
   background-color: var(--color-primary-light);
-  border: 2px solid
-  #96AF8C;
+  border: 2px solid #96AF8C;
 }
 
 .icecream-border-color:hover,
@@ -208,13 +200,13 @@
 }
 
 .icecoffee-border-color {
-  background-color:var(--color-primary-light);
+  background-color: var(--color-primary-light);
   border: 2px solid var(--color-ice-coffee);
 }
 
 .icecoffee-border-color:hover,
 .icecoffee-border-color:focus {
-  background-color:var(--color-ice-coffee);
+  background-color: var(--color-ice-coffee);
 }
 
 .milkshake-border-color {
@@ -293,7 +285,8 @@
   }
 }
 
-.contact-form__input-phone:invalid:not(:focus):not(:placeholder-shown), .contact-form__input:invalid:not(:focus):not(:placeholder-shown) {
+.contact-form__input-phone:invalid:not(:focus):not(:placeholder-shown),
+.contact-form__input:invalid:not(:focus):not(:placeholder-shown) {
   background-color: rgb(255, 0, 0);
 }
 
@@ -329,7 +322,8 @@
 .contact-form__textarea::placeholder {
   @include font(400, 14px, calc(20 / 14), 0.04em);
   color: var(--color-primary-dark);
-  
+}
+
 .contact-form__input:focus,
 .contact-form__input-phone:focus,
 .contact-form__textarea:focus {
@@ -368,19 +362,20 @@
 .contact-form__primary-button:hover,
 .contact-form__primary-button:focus {
   background-color:
-  #0A8817;
+    #0A8817;
 }
+
 .button-close {
   position: absolute;
-    top: 12px;
-    right: 12px;
-    width: 20px;
-    height: 20px;
-    border: 1px solid var(--color-primary-light);
-    border-radius: 50%;
-    cursor: pointer;
-    background-color: var(--color-primary-light);
-  }
+  top: 12px;
+  right: 12px;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--color-primary-light);
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: var(--color-primary-light);
+}
 
 .button-close__icon {
   position: absolute;
@@ -392,5 +387,5 @@
 
 .button-close:hover,
 .button-close:focus {
-    fill: var(--color-primary-yellow);
+  fill: var(--color-primary-yellow);
 }
