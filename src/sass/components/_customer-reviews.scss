@@ -1,5 +1,6 @@
 .section__customer-reviews {
-  padding-bottom: 40px;
+  padding-top: 228px;
+  padding-bottom: 393px;
 
   background-image: url(../images/backraund/background-mobile.jpg);
   background-size: cover;
@@ -9,7 +10,8 @@
   }
 
   @include tablett {
-    padding-bottom: 80px;
+    padding-top: 283px;
+    padding-bottom: 379px;
     background-image: url(../images/backraund/background-tablet.jpg);
     @media retina {
       background-image: url(../images/backraund/background-tablet@2x.jpg);
@@ -17,7 +19,8 @@
   }
 
   @include desktop {
-    padding-bottom: 100px;
+    padding-top: 464px;
+    padding-bottom: 228px;
     background-image: url(../images/backraund/background-desctop.jpg);
     @media retina {
       background-image: url(../images/backraund/background-desctop@2x.jpg);
