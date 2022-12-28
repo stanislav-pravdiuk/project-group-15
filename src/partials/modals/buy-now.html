@@ -1,48 +1,52 @@
-<div class="backdrop is-hidden" data-modal-buy-now>
-<div class="modal-buy-now">
-  <button class="button-close" type="button" data-modal-buy-now-close>
-    <svg class="button-close__icon" width="20" height="20">
-      <use href="./images/buy-now.svg/symbol-defs.svg#icon-close-line"></use>
-    </svg>
-  </button>
-  <strong class="contact-form__title">Buy now</strong>
 
-  <div class="modal-buy-now__bloque">
-    <ul class="modal-buy-now__list">
-      <li class="modal-buy-now__card">
-        <div class="modal-buy-now__image--icecream-color"></div>
-        <div class="modal-buy-now__card-form icecream-border-color">
-          <h3 class="modal-buy-now__list-header">Ice Cream</h3>
-        </div>
-      </li>
-      <li class="modal-buy-now__card">
-        <div class="modal-buy-now__image--icecoffee-color"></div>
-        <div class="modal-buy-now__card-form icecoffee-border-color">
-          <h3 class="modal-buy-now__list-header">Ice Coffee</h3>
-        </div>
-      </li>
-      <li class="modal-buy-now__card">
-        <div class="modal-buy-now__image--milkshake-color"></div>
-        <div class="modal-buy-now__card-form milkshake-border-color">
-          <h3 class="modal-buy-now__list-header">Milkshake</h3>
-        </div>
-      </li>
-    </ul>
-  </div>
+<div class="modal-buy-now is-hidden" data-modal-buy-now>
+  <div class="modal-buy-now__view">
+    <button class="button-close" type="button" data-modal-buy-now-close>
+      <svg class="button-close__icon" width="20" height="20">
+        <use href="./images/buy-now.svg/symbol-defs.svg#icon-close-line"></use>
+      </svg>
+    </button>
+    <strong class="contact-form__title">Buy now</strong>
 
-  <form name="contact-form">
-    <div class="contact-form__container">
-      <div class="contact-form__control">
-        <input
-          class="contact-form__input"
-          id="person-name"
-          type="text"
-          name="person-name"
-          placeholder="Name"
-          pattern="[a-zA-Zа-яА-Я]{1,25}"
-        />
-      </div>
+
+    <div class="modal-buy-now__bloque">
+      <ul class="modal-buy-now__list">
+        <li class="modal-buy-now__card">
+          <div class="modal-buy-now__image--icecream-color"></div>
+          <div class="modal-buy-now__card-form icecream-border-color">
+            <h3 class="modal-buy-now__list-header">Ice Cream</h3>
+          </div>
+        </li>
+        <li class="modal-buy-now__card">
+          <div class="modal-buy-now__image--icecoffee-color"></div>
+          <div class="modal-buy-now__card-form icecoffee-border-color">
+            <h3 class="modal-buy-now__list-header">Ice Coffee</h3>
+          </div>
+        </li>
+        <li class="modal-buy-now__card">
+          <div class="modal-buy-now__image--milkshake-color"></div>
+          <div class="modal-buy-now__card-form milkshake-border-color">
+            <h3 class="modal-buy-now__list-header">Milkshake</h3>
+          </div>
+        </li>
+      </ul>
     </div>
+
+
+    <form name="contact-form" autocomplete="on">
+      <div class="contact-form__container">
+        <div class="contact-form__control">
+          <input
+            class="contact-form__input"
+            id="person-name"
+            type="text"
+            name="person-name"
+            placeholder="Name"
+          />
+        </div>
+
+      </div>
+
 
     <div class="contact-form__container">
       <div class="contact-form__control">
@@ -54,21 +58,23 @@
           placeholder="Phone"
           pattern="[0-9]{1,15}"
         />
-      </div>
-    </div>
 
-    <div class="contact-form__container">
-      <div class="contact-form__control">
-        <textarea
-          class="contact-form__textarea"
-          id="person-comment"
-          name="person-comment"
-          placeholder="Comment"
-        ></textarea>
       </div>
-    </div>
 
-    <button class="contact-form__primary-button" type="submit">Submit</button>
-  </form>
+      <div class="contact-form__container">
+        <div class="contact-form__control">
+          <textarea
+            class="contact-form__textarea"
+            id="person-comment"
+            name="person-comment"
+            placeholder="Comment"
+          ></textarea>
+        </div>
+      </div>
+
+      <button class="contact-form__primary-button" type="submit">Submit</button>
+    </form>
+  </div>
 </div>
+
 </div>
